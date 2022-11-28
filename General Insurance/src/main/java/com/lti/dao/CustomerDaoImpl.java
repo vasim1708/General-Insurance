@@ -1,5 +1,5 @@
 package com.lti.dao;
 
-public class CustomerDaoImpl {
+public class CustomerDaoImpl implements CustomerDao {
 
 }

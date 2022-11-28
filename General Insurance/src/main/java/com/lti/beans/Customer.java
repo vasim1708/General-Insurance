@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,8 +22,8 @@ import javax.persistence.Table;
 public class Customer {
 	
 	@Id
-	@SequenceGenerator(name = "id", initialValue = 1, allocationSize=1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "id", initialValue = 1, allocationSize=1)
+	//@GeneratedValue
 	@Column(name="CustId")
 	private int id;
 	

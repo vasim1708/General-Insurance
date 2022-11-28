@@ -1,5 +1,5 @@
 
-package com.lti.entity;
+package com.lti.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +15,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Premium {
 
 	@Id
-	@SequenceGenerator(name = "premium_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "premium_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name = "PremID")
 	private int id;
 

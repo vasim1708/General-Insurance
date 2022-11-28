@@ -7,28 +7,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lti.beans.Claim;
-import com.lti.service.ClaimService;
+import com.lti.beans.Address;
+import com.lti.service.AddressService;
 
-@CrossOrigin
+@CrossOrigin(origins="*")
 @RestController
-@RequestMapping("/claim")
-public class ClaimController {
+@RequestMapping("/address")
+public class AddressController {
+	
 	
 	@Autowired
-	ClaimService claimService;
+	AddressService addService;
 	
-	
-	@PostMapping("/addclaim")
-	
-	public int addClaim(@RequestBody Claim c)
+	//http://localhost:8282/user/addaddress
+	@PostMapping("/addaddress")
+	public int addAddres(@RequestBody Address a)
 	{
-		return claimService.addClaim(c);
+		return addService.addAddress(a);
 	}
-	
-	
-	
-	
-	
 
 }

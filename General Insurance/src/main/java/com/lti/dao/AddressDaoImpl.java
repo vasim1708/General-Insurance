@@ -2,22 +2,24 @@ package com.lti.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
-import org.springframework.stereotype.Repository;
 
-import com.lti.beans.Claim;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lti.beans.Address;
+
 
 @Repository
-public class ClaimDaoImpl implements ClaimDao {
+public class AddressDaoImpl implements AddressDao {
 	
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	@Transactional
-	public int addClaim(Claim c) {
-		em.persist(c);
-		return c.getId();
+	public int addAdress(Address a) {
+		em.persist(a);
+		return a.getId();
 	}
 
 }
