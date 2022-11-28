@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -21,8 +21,8 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
-	@SequenceGenerator(name = "user_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "user_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name = "UserId")
 	private int id;
 

@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,8 +12,8 @@ import javax.persistence.Table;
 public class InsurancePlan {
 	
 	@Id
-	@SequenceGenerator(name = "insurance_id", initialValue = 1, allocationSize=1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "insurance_id", initialValue = 1, allocationSize=1)
+	//@GeneratedValue
 	@Column(name = "InsId")
 	private int id;
 	

@@ -1,5 +1,5 @@
 
-package com.lti.entity;
+package com.lti.beans;
 
 import java.time.LocalDate;
 
@@ -21,8 +21,8 @@ import javax.persistence.Table;
 public class Claim {
 
 	@Id
-	@SequenceGenerator(name = "claim_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "claim_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name="ClaimId")
 	private int id;
 

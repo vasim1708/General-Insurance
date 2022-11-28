@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import java.time.LocalDate;
 
@@ -15,11 +15,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PAYMENT")
+@Table(name = "PAYMENTS")
 public class Payment {
 	@Id
-	@SequenceGenerator(name = "payment_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "payment_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name = "PaymentId")
 	private int id;
 

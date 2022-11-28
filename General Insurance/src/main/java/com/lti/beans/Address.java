@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,12 +8,12 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ADDRESS")
+@Table(name="ADDRESS_TABLE")
 public class Address {
 	
 	@Id
-	@SequenceGenerator(name = "AddrSeq", initialValue = 1, allocationSize=1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "AddrSeq", initialValue = 1, allocationSize=1)
+	//@GeneratedValue
 	@Column(name="AddrId")
 	private int id;
 	

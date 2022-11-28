@@ -1,4 +1,4 @@
-package com.lti.entity;
+package com.lti.beans;
 
 import java.time.LocalDate;
 
@@ -15,12 +15,12 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "POLICY")
+@Table(name = "POLICYS")
 public class Policy {
 
 	@Id
-	@SequenceGenerator(name = "policy_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "policy_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name = "PolicyId")
 	private int id;
 
