@@ -8,15 +8,23 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ADDRESS")
+@Table(name="ADDRESS_TABLE")
 public class Address {
 	
 	@Id
 	@SequenceGenerator(name = "AddrSeq", initialValue = 1, allocationSize=1)
 	@GeneratedValue
 	@Column(name="AddrId")
-	private int id;
+	private int addid;
 	
+	public int getAddid() {
+		return addid;
+	}
+
+	public void setAddid(int addid) {
+		this.addid = addid;
+	}
+
 	@Column(name = "City")
 	private String city;
 	
@@ -26,13 +34,6 @@ public class Address {
 	@Column(name = "LandMark")
 	private String landMark;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getCity() {
 		return city;
@@ -60,7 +61,7 @@ public class Address {
 
 	public Address(int id, String city, int pincode, String landMark) {
 		super();
-		this.id = id;
+		this.addid = id;
 		this.city = city;
 		this.pincode = pincode;
 		this.landMark = landMark;
@@ -68,7 +69,7 @@ public class Address {
 
 	@Override
 	public String toString() {
-		return "Address [id=" + id + ", city=" + city + ", pincode=" + pincode + ", landMark=" + landMark + "]";
+		return "Address [id=" + addid + ", city=" + city + ", pincode=" + pincode + ", landMark=" + landMark + "]";
 	}
 	
 	

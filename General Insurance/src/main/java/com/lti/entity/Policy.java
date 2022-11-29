@@ -22,7 +22,7 @@ public class Policy {
 	@SequenceGenerator(name = "policy_id", initialValue = 1, allocationSize = 1)
 	@GeneratedValue
 	@Column(name = "PolicyId")
-	private int id;
+	private int pid;
 
 	@Column(name = "Status")
 	private String status;
@@ -52,12 +52,13 @@ public class Policy {
 	@JoinColumn(name = "InsId")
 	private InsurancePlan insurancePlan;
 
-	public int getId() {
-		return id;
+
+	public int getPid() {
+		return pid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
 
 	public String getStatus() {
@@ -127,7 +128,7 @@ public class Policy {
 	public Policy(int id, String status, LocalDate issueDate, LocalDate expiryDate, int duration, double policyAmount,
 			double planAmount, Customer customer, InsurancePlan insurancePlan) {
 		super();
-		this.id = id;
+		this.pid = id;
 		this.status = status;
 		this.issueDate = issueDate;
 		this.expiryDate = expiryDate;
@@ -140,7 +141,7 @@ public class Policy {
 
 	@Override
 	public String toString() {
-		return "Policy [id=" + id + ", status=" + status + ", issueDate=" + issueDate + ", expiryDate=" + expiryDate
+		return "Policy [id=" + pid + ", status=" + status + ", issueDate=" + issueDate + ", expiryDate=" + expiryDate
 				+ ", duration=" + duration + ", policyAmount=" + policyAmount + ", planAmount=" + planAmount
 				+ ", customer=" + customer + ", insurancePlan=" + insurancePlan + "]";
 	}

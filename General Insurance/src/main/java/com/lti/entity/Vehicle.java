@@ -15,13 +15,13 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "VEHICLE")
+@Table(name = "VEHICLE_New")
 public class Vehicle {
 	
 	
 	@Id
-	@SequenceGenerator(name = "vehicle_id", initialValue = 1, allocationSize=1)
-	@GeneratedValue
+//	@SequenceGenerator(name = "vehicle_id", initialValue = 1, allocationSize=1)
+//	@GeneratedValue
 	@Column(name = "VehId")
 	private int id;
 	
@@ -179,6 +179,11 @@ public class Vehicle {
 				+ ", drivingLicense=" + drivingLicense + ", purchaseDate=" + purchaseDate + ", registrationNo="
 				+ registrationNo + ", engineNo=" + engineNo + ", chassisNo=" + chassisNo + ", engineType=" + engineType
 				+ ", lastRenewDate=" + lastRenewDate + ", customer=" + customer + "]";
+	}
+
+	public Vehicle() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -17,12 +17,12 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "CLAIM_HISTORY")
+@Table(name = "CLAIM_HISTORY_New")
 public class Claim {
 
 	@Id
-	@SequenceGenerator(name = "claim_id", initialValue = 1, allocationSize = 1)
-	@GeneratedValue
+	//@SequenceGenerator(name = "claim_id", initialValue = 1, allocationSize = 1)
+	//@GeneratedValue
 	@Column(name="ClaimId")
 	private int id;
 
@@ -113,8 +113,7 @@ public class Claim {
 		this.policy = policy;
 	}
 
-	public Claim(int id, LocalDate date, String status, double amount, String reason, long contactNo, Customer customer,
-			Policy policy) {
+	public Claim() {
 		super();
 		this.id = id;
 		this.date = date;

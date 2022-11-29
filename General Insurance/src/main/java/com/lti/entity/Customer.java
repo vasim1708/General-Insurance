@@ -17,7 +17,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CUSTOMERS")
+@Table(name = "CUSTOMERSTABLE")
 
 public class Customer {
 	
@@ -25,7 +25,7 @@ public class Customer {
 	@SequenceGenerator(name = "id", initialValue = 1, allocationSize=1)
 	@GeneratedValue
 	@Column(name="CustId")
-	private int id;
+	private int cid;
 	
 	@Column(name = "CustName")
 	private String name;
@@ -43,12 +43,13 @@ public class Customer {
 	@JoinColumn(name="AddrId")
 	private Address address;
 
-	public int getId() {
-		return id;
+
+	public int getCid() {
+		return cid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCid(int cid) {
+		this.cid = cid;
 	}
 
 	public String getName() {
@@ -93,7 +94,7 @@ public class Customer {
 
 	public Customer(int id, String name, String emailId, LocalDate dateOfBirth, long contactNo, Address address) {
 		super();
-		this.id = id;
+		this.cid = id;
 		this.name = name;
 		this.emailId = emailId;
 		this.dateOfBirth = dateOfBirth;
@@ -103,7 +104,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth
+		return "Customer [id=" + cid + ", name=" + name + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth
 				+ ", contactNo=" + contactNo + ", address=" + address + "]";
 	}
 	
