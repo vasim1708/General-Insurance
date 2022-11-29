@@ -38,10 +38,10 @@ public class UserController {
 	
 	//http://localhost:8282/user/deleteuser
 
-	@DeleteMapping("/deleteuser")
-	public void deleteUser(@RequestBody int UserId)
+	@DeleteMapping("/deleteuser/{uid}")
+	public void deleteUser(@PathVariable("uid") int userId)
 	{
-		userService.deleteUser(UserId);
+		userService.deleteUser(userId);
 		
 	}
 

@@ -15,8 +15,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int addUser(User u) {
 		int userNo = dao.addUser(u);
-		
-		return 0;
+		return userNo;
 	}
 
 	@Override
@@ -24,9 +23,6 @@ public class UserServiceImpl implements UserService{
 		
 		User u=dao.findUser(userId);
 		return u;
-		
-		
-		
 		
 	}
 

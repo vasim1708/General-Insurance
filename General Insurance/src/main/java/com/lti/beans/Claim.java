@@ -23,22 +23,22 @@ public class Claim {
 	@Id
 	//@SequenceGenerator(name = "claim_id", initialValue = 1, allocationSize = 1)
 	//@GeneratedValue
-	@Column(name="ClaimId")
+	@Column(name="ClaimId",length = 20)
 	private int id;
 
 	@Column(name = "ClaimDate")
 	private LocalDate date;
 
-	@Column(name = "Status")
+	@Column(name = "Status",length = 20)
 	private String status;//approved or pending, not approved 
 
-	@Column(name = "ClaimAmount")
+	@Column(name = "ClaimAmount",length = 20)
 	private double amount;
 
-	@Column(name = "Reason")
+	@Column(name = "Reason",length = 20)
 	private String reason;
 
-	@Column(name = "ContactNo")
+	@Column(name = "ContactNo",length = 10)
 	private long contactNo;
 	
 	@ManyToOne(cascade = CascadeType.ALL)

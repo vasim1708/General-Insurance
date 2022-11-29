@@ -6,4 +6,8 @@ public interface AddressDao {
 
 	int addAdress(Address a);
 
+	Address findAdress(int addId);
+
+	void deleteAddress(int addId);
+
 }

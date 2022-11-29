@@ -14,24 +14,24 @@ public class Address {
 	@Id
 	//@SequenceGenerator(name = "AddrSeq", initialValue = 1, allocationSize=1)
 	//@GeneratedValue
-	@Column(name="AddrId")
-	private int id;
+	@Column(name="AddrId",length=10)
+	private int addid;
 	
-	@Column(name = "City")
+	@Column(name = "City",length = 20)
 	private String city;
 	
-	@Column(name = "Pincode")
+	@Column(name = "Pincode",length = 20)
 	private int pincode;
 	
-	@Column(name = "LandMark")
+	@Column(name = "LandMark",length = 20)
 	private String landMark;
 
-	public int getId() {
-		return id;
+	public int getAddid() {
+		return addid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAddid(int addid) {
+		this.addid = addid;
 	}
 
 	public String getCity() {
@@ -58,9 +58,9 @@ public class Address {
 		this.landMark = landMark;
 	}
 
-	public Address(int id, String city, int pincode, String landMark) {
+	public Address(int addid, String city, int pincode, String landMark) {
 		super();
-		this.id = id;
+		this.addid = addid;
 		this.city = city;
 		this.pincode = pincode;
 		this.landMark = landMark;
@@ -68,8 +68,14 @@ public class Address {
 
 	@Override
 	public String toString() {
-		return "Address [id=" + id + ", city=" + city + ", pincode=" + pincode + ", landMark=" + landMark + "]";
+		return "Address [addid=" + addid + ", city=" + city + ", pincode=" + pincode + ", landMark=" + landMark + "]";
 	}
+
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	
 	
 	

@@ -24,47 +24,47 @@ public class Customer {
 	@Id
 	//@SequenceGenerator(name = "id", initialValue = 1, allocationSize=1)
 	//@GeneratedValue
-	@Column(name="CustId")
-	private int id;
+	@Column(name="CustId",length = 10)
+	private int custid;
 	
-	@Column(name = "CustName")
-	private String name;
+	@Column(name = "CustName",length = 20)
+	private String custName;
 	
-	@Column(name = "CustMail")
-	private String emailId;
+	@Column(name = "CustMail",length = 20)
+	private String custMail;
 	
 	@Column(name = "CustDOB")
 	private LocalDate dateOfBirth;
 	
-	@Column(name = "CustContactNo")
+	@Column(name = "CustContactNo",length = 10)
 	private long contactNo;
 	
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name="AddrId")
 	private Address address;
 
-	public int getId() {
-		return id;
+	public int getCustid() {
+		return custid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCustid(int custid) {
+		this.custid = custid;
 	}
 
-	public String getName() {
-		return name;
+	public String getCustName() {
+		return custName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCustName(String custName) {
+		this.custName = custName;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public String getCustMail() {
+		return custMail;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setCustMail(String custMail) {
+		this.custMail = custMail;
 	}
 
 	public LocalDate getDateOfBirth() {
@@ -91,11 +91,12 @@ public class Customer {
 		this.address = address;
 	}
 
-	public Customer(int id, String name, String emailId, LocalDate dateOfBirth, long contactNo, Address address) {
+	public Customer(int custid, String custName, String custMail, LocalDate dateOfBirth, long contactNo,
+			Address address) {
 		super();
-		this.id = id;
-		this.name = name;
-		this.emailId = emailId;
+		this.custid = custid;
+		this.custName = custName;
+		this.custMail = custMail;
 		this.dateOfBirth = dateOfBirth;
 		this.contactNo = contactNo;
 		this.address = address;
@@ -103,9 +104,15 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth
-				+ ", contactNo=" + contactNo + ", address=" + address + "]";
+		return "Customer [custid=" + custid + ", custName=" + custName + ", custMail=" + custMail + ", dateOfBirth="
+				+ dateOfBirth + ", contactNo=" + contactNo + ", address=" + address + "]";
 	}
+
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	
 	
 

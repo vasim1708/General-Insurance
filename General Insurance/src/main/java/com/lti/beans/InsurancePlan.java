@@ -14,22 +14,22 @@ public class InsurancePlan {
 	@Id
 	//@SequenceGenerator(name = "insurance_id", initialValue = 1, allocationSize=1)
 	//@GeneratedValue
-	@Column(name = "InsId")
+	@Column(name = "InsId",length = 10)
 	private int id;
 	
-	@Column(name = "InsName")
+	@Column(name = "InsName",length = 20)
 	private String name;
 	
-	@Column(name = "InsType")
+	@Column(name = "InsType",length = 20)
 	private String type;//third party or comprehensive
 	
-	@Column(name = "InsAmount")
+	@Column(name = "InsAmount",length = 20)
 	private double amount;//2000
 	
-	@Column(name = "Commission")
+	@Column(name = "Commission",length = 20)
 	private int commission;//500
 	
-	@Column(name = "CompanyName")
+	@Column(name = "CompanyName",length = 20)
 	private String companyName;
 
 	public int getId() {
