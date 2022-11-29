@@ -24,16 +24,16 @@ public class User {
 	//@SequenceGenerator(name = "user_id", initialValue = 1, allocationSize = 1)
 	//@GeneratedValue
 	@Column(name = "UserId")
-	private int id;
+	private int UserId;
 
 	@Column(name = "UserMail")
-	private String emailId;
+	private String UserMail;
 
 	@Column(name = "UserPass")
-	private String password;
+	private String UserPass;
 
 	@Column(name = "Role")
-	private String role;
+	private String Role;
 
 	@Column(name = "Last_Password_Set")
 	private LocalDate lastPasswordSet;
@@ -42,7 +42,8 @@ public class User {
 	private LocalDate createdOn;
 
 	@Column(name = "LastLogin")
-	private LocalDateTime lastLogin;
+	private LocalDate lastLogin;
+	
 
 	@Column(name = "OTP")
 	private String otp;
@@ -50,37 +51,42 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "CustId")
 	private Customer customer;
-
-	public int getId() {
-		return id;
+	
+	
+	public User() {
+		super();
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public int getUserId() {
+		return UserId;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public void setUserId(int userId) {
+		UserId = userId;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public String getUserMail() {
+		return UserMail;
 	}
 
-	public String getPassword() {
-		return password;
+	public void setUserMail(String userMail) {
+		UserMail = userMail;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public String getUserPass() {
+		return UserPass;
+	}
+
+	public void setUserPass(String userPass) {
+		UserPass = userPass;
 	}
 
 	public String getRole() {
-		return role;
+		return Role;
 	}
 
 	public void setRole(String role) {
-		this.role = role;
+		Role = role;
 	}
 
 	public LocalDate getLastPasswordSet() {
@@ -99,11 +105,11 @@ public class User {
 		this.createdOn = createdOn;
 	}
 
-	public LocalDateTime getLastLogin() {
+	public LocalDate getLastLogin() {
 		return lastLogin;
 	}
 
-	public void setLastLogin(LocalDateTime lastLogin) {
+	public void setLastLogin(LocalDate lastLogin) {
 		this.lastLogin = lastLogin;
 	}
 
@@ -123,13 +129,13 @@ public class User {
 		this.customer = customer;
 	}
 
-	public User(int id, String emailId, String password, String role, LocalDate lastPasswordSet, LocalDate createdOn,
-			LocalDateTime lastLogin, String otp, Customer customer) {
+	public User(int userId, String userMail, String userPass, String role, LocalDate lastPasswordSet,
+			LocalDate createdOn, LocalDate lastLogin, String otp, Customer customer) {
 		super();
-		this.id = id;
-		this.emailId = emailId;
-		this.password = password;
-		this.role = role;
+		UserId = userId;
+		UserMail = userMail;
+		UserPass = userPass;
+		Role = role;
 		this.lastPasswordSet = lastPasswordSet;
 		this.createdOn = createdOn;
 		this.lastLogin = lastLogin;
@@ -139,10 +145,12 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", emailId=" + emailId + ", password=" + password + ", role=" + role
+		return "User [UserId=" + UserId + ", UserMail=" + UserMail + ", UserPass=" + UserPass + ", Role=" + Role
 				+ ", lastPasswordSet=" + lastPasswordSet + ", createdOn=" + createdOn + ", lastLogin=" + lastLogin
 				+ ", otp=" + otp + ", customer=" + customer + "]";
-	} 
+	}
+
+	
 	
 	
 	

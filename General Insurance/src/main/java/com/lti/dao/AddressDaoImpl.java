@@ -19,7 +19,23 @@ public class AddressDaoImpl implements AddressDao {
 	@Transactional
 	public int addAdress(Address a) {
 		em.persist(a);
-		return a.getId();
+		return a.getAddid();
+	}
+
+	@Override
+	@Transactional
+	public Address findAdress(int addId) {
+		Address a= em.find(Address.class, addId);
+		return a;
+	}
+
+	@Override
+	@Transactional
+	public void deleteAddress(int addId) {
+		
+		Address a=em.find(Address.class, addId);
+		em.remove(a);
+		
 	}
 
 }

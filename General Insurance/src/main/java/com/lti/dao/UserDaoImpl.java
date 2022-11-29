@@ -18,7 +18,7 @@ public class UserDaoImpl  implements UserDao{
 	@Transactional
 	public int addUser(User u) {
 		em.persist(u);
-		return u.getId();
+		return u.getUserId();
 	}
 
 	@Override
@@ -29,6 +29,7 @@ public class UserDaoImpl  implements UserDao{
 		return e;	}
 
 	@Override
+	@Transactional
 	public void deleteUser(int userId) {
 		User u=em.find(User.class, userId);
 		em.remove(u);
