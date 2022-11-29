@@ -8,7 +8,7 @@ public interface PolicyService {
 
 	List<Policy> getAllPolicy();
 
-	Policy findById(int id);
+	Policy findById(int pid);
 
 	int addPolicy(Policy p);
 

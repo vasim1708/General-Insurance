@@ -20,8 +20,8 @@ public class PolicyServiceImpl implements PolicyService{
 	
 	}
 	@Override
-	public Policy findById(int id) {
-		Policy p1=dao.findById(id);
+	public Policy findById(int pid) {
+		Policy p1=dao.findById(pid);
 		return p1;
 	
 	}

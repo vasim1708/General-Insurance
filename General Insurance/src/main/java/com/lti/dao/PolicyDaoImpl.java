@@ -14,18 +14,21 @@ import com.lti.beans.Policy;
 public class PolicyDaoImpl implements PolicyDao {
 	@PersistenceContext 
 	private EntityManager em;
-	@Transactional
+	
+	@Override
 	public List<Policy> getAllPolicy() {
 			Query qry = em.createQuery("select plan from Policy as plan");
 			List<Policy> list = qry.getResultList();
 			return list;
 	
 	}
-	public Policy findById(int id) {
-		Policy p = em.find(Policy.class, id);
+	@Override
+	public Policy findById(int pid) {
+		Policy p = em.find(Policy.class, pid);
 		return p;
 	}
 	@Override
+	@Transactional
 	public int addPolicy(Policy p) {
 		em.persist(p);
 		return p.getId();
