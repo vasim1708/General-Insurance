@@ -19,6 +19,11 @@ import javax.persistence.Table;
 public class Vehicle {
 	
 	
+	public Vehicle() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	//@SequenceGenerator(name = "vehicle_id", initialValue = 1, allocationSize=1)
 	//@GeneratedValue

@@ -1,5 +1,7 @@
 package com.lti.dao;
 
+import java.util.List;
+
 import com.lti.beans.User;
 
 public interface UserDao {
@@ -9,5 +11,7 @@ public interface UserDao {
 	User findUser(int userId);
 
 	void deleteUser(int userId);
+
+	List<User> getAllUsers();
 
 }

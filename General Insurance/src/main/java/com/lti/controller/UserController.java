@@ -1,5 +1,7 @@
 package com.lti.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lti.beans.Customer;
 import com.lti.beans.User;
 import com.lti.service.UserService;
 
@@ -22,8 +25,8 @@ public class UserController {
 	UserService userService;
 	
 	
-	//http://localhost:8282/user/adduser
-	@PostMapping("/adduser")
+	//http://localhost:8282/user/register
+	@PostMapping("/register")
 	public int addUser(@RequestBody User u)
 	{
 		return userService.addUser(u);
@@ -44,5 +47,14 @@ public class UserController {
 		userService.deleteUser(userId);
 		
 	}
+	
+	//http://localhost:8282/customer/allusers
+			@GetMapping("/allusers")
+			public List<User> getAllUsers()
+			{
+				return userService.getAllUsers();
+			}
+	
+	
 
 }

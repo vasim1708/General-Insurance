@@ -144,6 +144,11 @@ public class Policy {
 				+ ", duration=" + duration + ", policyAmount=" + policyAmount + ", planAmount=" + planAmount
 				+ ", customer=" + customer + ", insurancePlan=" + insurancePlan + "]";
 	}
+
+	public Policy() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	

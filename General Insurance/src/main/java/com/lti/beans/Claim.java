@@ -131,6 +131,11 @@ public class Claim {
 		return "Claim [id=" + id + ", date=" + date + ", status=" + status + ", amount=" + amount + ", reason=" + reason
 				+ ", contactNo=" + contactNo + ", customer=" + customer + ", policy=" + policy + "]";
 	}
+
+	public Claim() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 
